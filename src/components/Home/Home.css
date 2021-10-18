@@ -1,0 +1,10 @@
+.intro-text{
+ padding: 10px 0px;
+ font-weight: 400;
+ color:rgba(0, 0, 0, 0.761);
+ 
+}
+.intro-text-container{
+    background-color: rgba(138, 137, 137, 0.22);
+    margin: 100px 0px;
+}
