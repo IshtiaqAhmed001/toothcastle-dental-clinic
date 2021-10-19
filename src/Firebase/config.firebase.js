@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCefwGq-RDXuWJAM-KKFfRaq7s8K40K_xE",
-    authDomain: "tooth-castle-dental-clinic.firebaseapp.com",
-    projectId: "tooth-castle-dental-clinic",
-    storageBucket: "tooth-castle-dental-clinic.appspot.com",
-    messagingSenderId: "10004225848",
-    appId: "1:10004225848:web:d008e3b67e90e1f8eeebcd"
+    apiKey: "AIzaSyDMK0tedXHy2-xfTPpiT9i6vhp0VyL1dUs",
+    authDomain: "tooth-castle-dental-clin-b649c.firebaseapp.com",
+    projectId: "tooth-castle-dental-clin-b649c",
+    storageBucket: "tooth-castle-dental-clin-b649c.appspot.com",
+    messagingSenderId: "831868462443",
+    appId: "1:831868462443:web:debdb9b8dfb831734dd82e"
 };
 
 export default firebaseConfig;

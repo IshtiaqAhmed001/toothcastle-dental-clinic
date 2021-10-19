@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Firebase/firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 
 initializeAuthentication();
@@ -9,6 +9,7 @@ const useFirebase = () => {
 
     const [user, setUser] = useState({});
     const auth = getAuth();
+    const [error, setError] = useState('');
 
     const signInWithGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
@@ -23,20 +24,27 @@ const useFirebase = () => {
             .then(() => { })
     }
 
-    // const signInWithEmailandPass = () => {
-    //     createUserWithEmailAndPassword(auth, email, password)
-    //         .then((userCredential) => {
-    //             // Signed in 
-    //             const user = userCredential.user;
-    //             // ...
-    //         })
-    //         .catch((error) => {
-    //             const errorCode = error.code;
-    //             const errorMessage = error.message;
-    //             // ..
-    //         });
+    const registerWithEmailandPass = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                setUser(userCredential.user);
+                setError('');
+            })
+            .catch((error) => {
+                setError(error.message);
 
-    // }
+            });
+    }
+    const signInUsingEmailandPassword = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                setUser(userCredential.user);
+                setError('');
+            })
+            .catch((error) => {
+                setError(error.message);
+            });
+    }
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, user => {
@@ -54,6 +62,10 @@ const useFirebase = () => {
         signInWithGoogle,
         user,
         logOut,
+        registerWithEmailandPass,
+        error,
+        setError,
+        signInUsingEmailandPassword
     }
 }
 
