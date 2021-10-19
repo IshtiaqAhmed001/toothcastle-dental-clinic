@@ -1,0 +1,20 @@
+.footer-container{
+    background-color: #223243;
+    color:whitesmoke;
+}
+.ul-container{
+    text-align: center;
+}
+.ul-container ul{
+   display: inline-block;
+   text-align: left;
+}
+.footer-links{
+    padding: 5px;
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.686);
+    cursor: pointer;
+}
+.footer-links:hover{
+    color: skyblue;
+}

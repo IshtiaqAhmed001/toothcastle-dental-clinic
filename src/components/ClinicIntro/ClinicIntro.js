@@ -21,7 +21,7 @@ const ClinicIntro = () => {
                         <li class="list-group-item list-group-item-warning">Insurance facility available</li>
                     </ul>
                 </div>
-                <div className="row mx-auto g-5">
+                <div className="row mx-auto g-5 second-intro-section">
                     <div className="col-lg-6 col-md-12" >
                         <h1>Why Choose Us ?</h1>
                         <p className="intro-paragraph text-start p-2">Our dental clinic was founded in 2021 by Ishtiaq Ahmed and team ProgrammingHero with the vision of providing high quality and affordable health care infrastructure Bangladesh.</p>

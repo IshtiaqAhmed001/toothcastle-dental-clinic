@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import useServices from '../../hooks/useServices';
 import Service from '../Service/Service';
 
 const Services = (props) => {
 
-    const [services, setServices] = useState([]);
-    useEffect(() => {
-        fetch('/servicesData.json')
-            .then(res => res.json())
-            .then(data => setServices(data))
-    }, [])
+    const { services } = useServices();
 
 
     return (

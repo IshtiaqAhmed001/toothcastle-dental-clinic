@@ -6,6 +6,7 @@ import Services from './components/Services/Services';
 import Login from './components/Login/Login';
 import Header from './components/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Login></Login>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>
