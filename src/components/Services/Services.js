@@ -10,10 +10,12 @@ const Services = (props) => {
             .then(data => setServices(data))
     }, [])
 
+
     return (
-        <div className="row p-5 mx-auto">
+        <div className="row p-5 mx-auto g-5">
+            <h1 className="display-4 mb-4 section-title">Our Dental Services</h1>
             {
-                services.map(service => <Service service={service}></Service>)
+                services.slice(1, 7).map(service => <Service service={service}></Service>)
             }
         </div>
     );

@@ -23,21 +23,21 @@
     {
         "id": 4,
         "name": "Wisdom Tooth Removal",
-        "description": "Wisdom tooth is the last tooth in your jaw. It normally erupts at teenage when people should be matured. Some people may face severe pain while wisdom tooth eruption, because there is not enough space for any further tooth and the wisdom tooth tries to erupt. This causes some disturbance in the shape and angle of the wisdom tooth. If it causes severe pain, your dentist may suggest you to make it remove immediately.",
+        "description": "Wisdom tooth is the last tooth in your jaw. It normally erupts at teenage when people should be matured. Some people may face severe pain while wisdom tooth eruption, because there is not enough space for any further tooth and the wisdom tooth tries to erupt. If it causes severe pain, your dentist may suggest you to make it remove immediately.",
         "img": "https://i.ibb.co/1fR2b2B/4.jpg",
         "price": "90$"
     },
     {
         "id": 5,
         "name": "Children Dentistry",
-        "description": "Children dentistry is a special one among all types of dental services which only deals with the children. It is also called the pediatric dentistry.The major issues related to children’s dentistry are infant oral health examination, urgent dental care, special advisory management regarding teething (tooth eruption & tooth loss and relaxing medication under teething pain Etc.)",
+        "description": "Children dentistry is a special one among all types of dental services which only deals with the children. It is also called the pediatric dentistry.The major issues related to children’s dentistry are infant oral health examination, urgent dental care, special advisory management regarding teething.",
         "img": "https://i.ibb.co/yFK0T6k/5.jpg",
         "price": "200$"
     },
     {
         "id": 6,
         "name": "Braces (Orthodontics)",
-        "description": "Braces are dental tools that help correct problems with your teeth, like crowding, crooked teeth, or teeth that are out of alignment. Many people get braces when they’re teenagers, but adults get them too. As you wear them, braces slowly straighten and align your teeth so you have a normal bite. Some people get braces to adjust their smile",
+        "description": "Braces are dental tools that help correct problems with your teeth, like crowding, crooked teeth, or teeth that are out of alignment.As you wear them, braces slowly straighten and align your teeth so you have a normal bite. Some people get braces to adjust their smile",
         "img": "https://i.ibb.co/bH9b2nC/6.jpg",
         "price": "1000$"
     },

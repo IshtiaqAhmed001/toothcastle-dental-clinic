@@ -4,6 +4,7 @@ import img1 from '../../images/banner/001.jpg';
 import img2 from '../../images/banner/01.jpg';
 import img3 from '../../images/banner/02.jpg';
 import img4 from '../../images/banner/03.jpg';
+import ClinicIntro from '../ClinicIntro/ClinicIntro';
 import Service from '../Service/Service';
 import Services from '../Services/Services';
 import './Home.css';
@@ -68,6 +69,9 @@ const Home = () => {
             </div>
             <div className="featured-services ">
                 <Services></Services>
+            </div>
+            <div className="clinic-intro">
+                <ClinicIntro></ClinicIntro>
             </div>
 
         </div>
