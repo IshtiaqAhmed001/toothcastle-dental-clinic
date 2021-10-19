@@ -14,7 +14,7 @@ const Login = () => {
         <div >
             <div className="login-container">
                 <h2 className="display-5 text-primary mt-4">Please Login</h2>
-                <p className="my-4">You can login using any of the methods</p>
+                <p className="my-4">You can login using Google directly</p>
                 <div>
                     <button className="button mb-5" onClick={signInWithGoogle}><span className="google-icon">{googleIcon}</span></button>
 

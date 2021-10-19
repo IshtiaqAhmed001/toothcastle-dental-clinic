@@ -5,8 +5,8 @@ const ServiceDetails = () => {
     const { serviceNo } = useParams();
 
     return (
-        <div>
-            <h1>THis is service no: {serviceNo}</h1>
+        <div className="my-5">
+            <h1 className="my-5">THis is service no: {serviceNo}</h1>
 
         </div >
     );

@@ -37,7 +37,7 @@ const Footer = () => {
                             <li> <NavLink className="footer-links" to="*">Dental Implants</NavLink></li>
                             <li> <NavLink className="footer-links" to="*">Smile Makeover</NavLink></li>
                             <li> <NavLink className="footer-links" to="*">Gum Sculpting</NavLink></li>
-                            <li> <NavLink className="footer-links" to="*">Root Canal</NavLink></li>
+
                         </ul>
                     </div>
                 </div>

@@ -17,8 +17,8 @@ const Header = () => {
                 <div className="d-flex">
                     <NavLink className="nav-link" to='/home'>Home</NavLink>
                     <NavLink className="nav-link" to='/services'>Services</NavLink>
-                    <NavLink className="nav-link" to='/blog'>Blog</NavLink>
-                    <NavLink className="nav-link" to='/contact'>Contact</NavLink>
+                    <NavLink className="nav-link" to='/dentists'>Dentists</NavLink>
+                    <NavLink className="nav-link" to='/contact'>Blog</NavLink>
                     {/* <NavLink className="nav-link" to='/login'>Login</NavLink> */}
                     <NavLink className="user-name" to='/'>{user?.displayName}</NavLink>
                     {

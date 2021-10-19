@@ -11,6 +11,7 @@ import NotFound from './components/NotFound/NotFound';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Register from './components/Register/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Dentists from './components/Dentists/Dentists';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <Route path="/dentists">
+              <Dentists></Dentists>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
