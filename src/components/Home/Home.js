@@ -74,6 +74,7 @@ const Home = () => {
                 <ClinicIntro></ClinicIntro>
             </div>
 
+
         </div>
     );
 };
