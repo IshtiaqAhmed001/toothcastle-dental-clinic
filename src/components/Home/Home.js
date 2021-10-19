@@ -4,6 +4,8 @@ import img1 from '../../images/banner/001.jpg';
 import img2 from '../../images/banner/01.jpg';
 import img3 from '../../images/banner/02.jpg';
 import img4 from '../../images/banner/03.jpg';
+import Service from '../Service/Service';
+import Services from '../Services/Services';
 import './Home.css';
 
 const Home = () => {
@@ -65,7 +67,7 @@ const Home = () => {
                 </Carousel>
             </div>
             <div className="featured-services ">
-                <h2 className="my-5">Our Services</h2>
+                <Services></Services>
             </div>
 
         </div>
