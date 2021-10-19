@@ -2,6 +2,7 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
 import './Login.css';
@@ -11,7 +12,21 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { signInUsingEmailandPassword } = useAuth();
+    const { signInUsingEmailandPassword, user, setUser, setError } = useAuth();
+
+    // taking location for redirecting 
+    const location = useLocation();
+    const redirect_url = location.state?.from || '/home';
+
+    const history = useHistory();
+
+    const handleGoogleLoginRedirect = () => {
+        signInWithGoogle()
+            .then(result => {
+                setUser(result.user);
+                history.push(redirect_url);
+            })
+    }
 
     const handleEmailChange = e => {
         setEmail(e.target.value);
@@ -22,7 +37,15 @@ const Login = () => {
     const handleLogin = e => {
         e.preventDefault();
         console.log(email, password);
-        signInUsingEmailandPassword(email, password);
+        signInUsingEmailandPassword(email, password)
+            .then((userCredential) => {
+                setUser(userCredential.user);
+                history.push(redirect_url);
+                setError('');
+            })
+            .catch((error) => {
+                setError(error.message);
+            });;
 
     }
 
@@ -54,7 +77,7 @@ const Login = () => {
                             <div className="d-flex justify-content-center">
                                 <div> <input className="btn btn-dark mt-2" type="submit" value="Login" /></div>
                                 <div>
-                                    <button className="button" onClick={signInWithGoogle}><span className="google-icon">{googleIcon}</span></button>
+                                    <button className="button" onClick={handleGoogleLoginRedirect}><span className="google-icon">{googleIcon}</span></button>
                                 </div>
 
                             </div>

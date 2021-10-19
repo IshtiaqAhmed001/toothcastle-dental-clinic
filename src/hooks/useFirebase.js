@@ -14,10 +14,8 @@ const useFirebase = () => {
     const signInWithGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
 
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user);
-            })
+        return signInWithPopup(auth, googleProvider)
+
     }
     const logOut = () => {
         signOut(auth)
@@ -44,14 +42,8 @@ const useFirebase = () => {
 
 
     const signInUsingEmailandPassword = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                setUser(userCredential.user);
-                setError('');
-            })
-            .catch((error) => {
-                setError(error.message);
-            });
+        return signInWithEmailAndPassword(auth, email, password)
+
     }
 
     useEffect(() => {
@@ -69,6 +61,7 @@ const useFirebase = () => {
     return {
         signInWithGoogle,
         user,
+        setUser,
         logOut,
         registerWithEmailandPass,
         error,
