@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import useServices from '../../hooks/useServices';
 import img1 from '../../images/banner/001.jpg';
 import img2 from '../../images/banner/01.jpg';
 import img3 from '../../images/banner/02.jpg';
@@ -10,6 +11,7 @@ import Services from '../Services/Services';
 import './Home.css';
 
 const Home = () => {
+    const { services } = useServices();
 
     return (
         <div className="home-container">
@@ -68,7 +70,12 @@ const Home = () => {
                 </Carousel>
             </div>
             <div className="featured-services ">
-                <Services></Services>
+                <div className="row p-5 mx-auto g-5">
+                    <h1 className="display-4 mb-4 section-title">Our Popular Services</h1>
+                    {
+                        services.slice(1, 7).map(service => <Service service={service}></Service>)
+                    }
+                </div>
             </div>
             <div className="clinic-intro">
                 <ClinicIntro></ClinicIntro>

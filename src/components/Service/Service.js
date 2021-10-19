@@ -1,9 +1,16 @@
 import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import './service.css';
 
 const Service = ({ service }) => {
-    const { name, id, img, description, price } = service;
+
+    const { name, id, img, description } = service;
+    const history = useHistory();
+    const url = `/details/${id}`;
+    const handleViewDetailsBtn = () => {
+        history.push(url);
+    }
     return (
         <div className="col-lg-4 col-md-6 col-sm-12">
             <div class="card h-100">
@@ -13,7 +20,7 @@ const Service = ({ service }) => {
                     <p class="card-text">{description}</p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted"><button className="btn btn-dark">View Details</button></small>
+                    <small class="text-muted"><button onClick={handleViewDetailsBtn} className="btn btn-dark">View Details</button></small>
                 </div>
             </div>
         </div>

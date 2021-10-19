@@ -7,6 +7,8 @@ import Login from './components/Login/Login';
 import Header from './components/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
 import Footer from './components/Footer/Footer';
+import NotFound from './components/NotFound/NotFound';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -24,8 +26,14 @@ function App() {
             <Route path="/services">
               <Services></Services>
             </Route>
+            <Route exact path="/details/:serviceNo">
+              <ServiceDetails></ServiceDetails>
+            </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

@@ -1,0 +1,20 @@
+.login-container{
+margin-bottom: 100px;
+}
+
+.button{
+    border: none;
+    background-color: white;
+    padding: 10px 20px;
+}
+.google-icon{
+    font-size: 3em;
+    color: rgb(43, 43, 212);
+    
+    
+}
+.google-icon:hover{
+    font-size: 3em;
+    color: blue;
+   
+}

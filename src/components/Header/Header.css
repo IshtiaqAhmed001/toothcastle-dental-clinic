@@ -1,12 +1,41 @@
 .header{
     background-color:whitesmoke ;
     padding: 5px 0;
-    /* height: 100px; */
     display: flex;
     align-items: center;
     color: white;
 }
-.nav-link:hover{
-    background-color: lightgray;
-    border-radius: 5%;
+.text-logo{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
+.text-logo:hover{
+    color: rgb(49, 77, 128);
+}
+.nav-link,.logout-btn{
+    color:black;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover{
+    color: rgb(49, 77, 128);
+    transform: scale(1.2);
+
+}
+.user-name{
+    color:black;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
