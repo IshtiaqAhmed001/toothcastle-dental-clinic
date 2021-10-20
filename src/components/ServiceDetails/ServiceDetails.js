@@ -18,23 +18,23 @@ const ServiceDetails = () => {
 
             <div className="w-50 mx-auto">
                 {
-                    showDetails.map(singleDetail => <div className="col-lg-12 col-md-6 col-sm-12">
-                        <div className="card h-100">
-                            <img className="card-img-top" src={singleDetail.img} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title">{singleDetail.name}</h5>
-                                <p className="card-text text-start">
-                                    {singleDetail.description}
-                                    <p className="fw-bold">Price: {singleDetail.price}</p>
-                                </p>
-
-                            </div>
-                            <div className="card-footer">
-
-                                <small className="text-muted"><button className="btn btn-dark">Book Now</button></small>
-                            </div>
+                    showDetails.map(singleDetail => <div class="card" style={{ width: "18rem" }}>
+                        <img class="card-img-top" src={singleDetail.img} alt="Card image cap" />
+                        <div class="card-body">
+                            <h5 class="card-title">{singleDetail.name}</h5>
+                            <p class="card-text">{singleDetail.description}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Price: {singleDetail.price}</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
                         </div>
                     </div>
+
                     )
 
                 }
