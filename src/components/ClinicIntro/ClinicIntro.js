@@ -22,7 +22,7 @@ const ClinicIntro = () => {
                     </ul>
                 </div>
                 <div className="row mx-auto g-5 second-intro-section">
-                    <div className="col-lg-6 col-md-12" >
+                    <div className="col-lg-6 col-md-6 col-sm-12" >
                         <h1>Why Choose Us ?</h1>
                         <p className="intro-paragraph text-start p-2">Our dental clinic was founded in 2021 by Ishtiaq Ahmed and team ProgrammingHero with the vision of providing high quality and affordable health care infrastructure Bangladesh.</p>
                         <p className="text-start p-2">
@@ -32,8 +32,10 @@ const ClinicIntro = () => {
                             <button className="btn btn-dark">Book an Appointment</button>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-12">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/U24WMWyMr08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div className="col-lg-6 col-md-6 col-sm-12">
+
+                        <iframe className="container-fluid" width="560" height="315" src="https://www.youtube.com/embed/U24WMWyMr08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
                     </div>
                 </div>
             </div>

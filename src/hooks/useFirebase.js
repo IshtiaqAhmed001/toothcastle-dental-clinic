@@ -33,16 +33,7 @@ const useFirebase = () => {
     }
 
     const registerWithEmailandPass = (name, email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                setUser(userCredential.user);
-                setError('');
-                setUserName(name);
-            })
-            .catch((error) => {
-                setError(error.message);
-
-            });
+        return createUserWithEmailAndPassword(auth, email, password)
     }
 
 

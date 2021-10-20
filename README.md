@@ -16,4 +16,4 @@ To build this projet we used React,which is a JavaScript Library. We also implem
 
 
 ### Live site link:
-https://tooth-castle-dental-clin-b649c.web.app/home
+https://tooth-castle-dental-clin-b649c.web.app/

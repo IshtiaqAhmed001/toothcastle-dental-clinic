@@ -2,12 +2,18 @@ import { updateProfile } from '@firebase/auth';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { useHistory, useLocation } from 'react-router';
 
 const Register = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
-    const { registerWithEmailandPass, error, setError } = useAuth();
+    const { registerWithEmailandPass, error, setError, setUser, setUserName } = useAuth();
+
+    // taking location for redirecting 
+    const location = useLocation();
+    const redirect_url = location.state?.from || '/home';
+    const history = useHistory();
 
     const handleNameChange = e => {
         setName(e.target.value);
@@ -26,7 +32,18 @@ const Register = () => {
             return;
         }
 
-        registerWithEmailandPass(name, email, password);
+        registerWithEmailandPass(name, email, password)
+            .then((userCredential) => {
+                setUser(userCredential.user);
+                setError('');
+                setUserName(name);
+                history.push(redirect_url);
+
+            })
+            .catch((error) => {
+                setError(error.message);
+
+            });
     }
 
 
