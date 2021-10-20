@@ -12,6 +12,7 @@ import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Register from './components/Register/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Dentists from './components/Dentists/Dentists';
+import Appointment from './components/Appointment/Appointment';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
             </Route>
             <Route path="/dentists">
               <Dentists></Dentists>
+            </Route>
+            <Route path="/appointment">
+              <Appointment></Appointment>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
