@@ -9,17 +9,23 @@ const useFirebase = () => {
 
     const [user, setUser] = useState({});
     const auth = getAuth();
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
     const signInWithGoogle = () => {
+        setLoading(true);
         const googleProvider = new GoogleAuthProvider();
 
         return signInWithPopup(auth, googleProvider)
 
     }
     const logOut = () => {
+        setLoading(true);
         signOut(auth)
             .then(() => { })
+            .finally(() => {
+                setLoading(false);
+            })
     }
     const setUserName = name => {
         updateProfile(auth.currentUser, { displayName: name })
@@ -42,6 +48,7 @@ const useFirebase = () => {
 
 
     const signInUsingEmailandPassword = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
 
     }
@@ -54,6 +61,7 @@ const useFirebase = () => {
             else {
                 setUser({});
             }
+            setLoading(false);
         });
         return () => unsubscribe;
     }, []);
@@ -67,7 +75,9 @@ const useFirebase = () => {
         error,
         setError,
         signInUsingEmailandPassword,
-        setUserName
+        setUserName,
+        loading,
+        setLoading
     }
 }
 

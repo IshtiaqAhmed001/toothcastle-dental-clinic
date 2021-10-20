@@ -7,7 +7,6 @@ import img3 from '../../images/banner/02.jpg';
 import img4 from '../../images/banner/03.jpg';
 import ClinicIntro from '../ClinicIntro/ClinicIntro';
 import Service from '../Service/Service';
-import Services from '../Services/Services';
 import './Home.css';
 
 const Home = () => {

@@ -12,7 +12,7 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { signInUsingEmailandPassword, user, setUser, setError } = useAuth();
+    const { signInUsingEmailandPassword, user, setUser, setError, loading, setLoading } = useAuth();
 
     // taking location for redirecting 
     const location = useLocation();
@@ -26,6 +26,9 @@ const Login = () => {
                 setUser(result.user);
                 history.push(redirect_url);
             })
+            .finally(() => {
+                setLoading(false);
+            });
     }
 
     const handleEmailChange = e => {
@@ -45,7 +48,11 @@ const Login = () => {
             })
             .catch((error) => {
                 setError(error.message);
-            });;
+            })
+            .finally(() => {
+                setLoading(false);
+            })
+            ;
 
     }
 

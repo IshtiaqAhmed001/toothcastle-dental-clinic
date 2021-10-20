@@ -23,11 +23,14 @@ const ServiceDetails = () => {
                             <img className="card-img-top" src={singleDetail.img} alt="Card image cap" />
                             <div className="card-body">
                                 <h5 className="card-title">{singleDetail.name}</h5>
-                                <p className="card-text">{singleDetail.description}</p>
+                                <p className="card-text text-start">
+                                    {singleDetail.description}
+                                    <p className="fw-bold">Price: {singleDetail.price}</p>
+                                </p>
 
                             </div>
                             <div className="card-footer">
-                                <h6>Price: {singleDetail.price}</h6>
+
                                 <small className="text-muted"><button className="btn btn-dark">Book Now</button></small>
                             </div>
                         </div>
