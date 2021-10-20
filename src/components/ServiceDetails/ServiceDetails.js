@@ -10,18 +10,32 @@ const ServiceDetails = () => {
     console.log(serviceNo)
 
     const showDetails = services.filter(service => parseInt(service.id) === serviceNo);
-    console.log(showDetails);
+
 
     return (
         <div className="my-5">
             <h1 className="my-5">THis is service no: {serviceNo}</h1>
-            {
-                <div>
-                    <h2>Name: {showDetails[0].name}</h2>
-                    <img src={showDetails[0].img} alt="" />
-                </div>
 
-            }
+            <div className="w-50 mx-auto">
+                {
+                    showDetails.map(singleDetail => <div className="col-lg-12 col-md-6 col-sm-12">
+                        <div className="card h-100">
+                            <img className="card-img-top" src={singleDetail.img} alt="Card image cap" />
+                            <div className="card-body">
+                                <h5 className="card-title">{singleDetail.name}</h5>
+                                <p className="card-text">{singleDetail.description}</p>
+
+                            </div>
+                            <div className="card-footer">
+                                <h6>Price: {singleDetail.price}</h6>
+                                <small className="text-muted"><button className="btn btn-dark">Book Now</button></small>
+                            </div>
+                        </div>
+                    </div>
+                    )
+
+                }
+            </div>
         </div >
     );
 };

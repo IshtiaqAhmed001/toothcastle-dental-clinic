@@ -13,16 +13,16 @@ const Service = ({ service }) => {
     }
     return (
         <div className="col-lg-4 col-md-6 col-sm-12">
-            <div class="card h-100">
-                <img class="card-img-top" src={img} alt="Card image cap" />
-                <div class="card-body">
-                    <h5 class="card-title">{name}</h5>
-                    <p class="card-text">{description}</p>
+            <div className="card h-100">
+                <img className="card-img-top" src={img} alt="Card image cap" />
+                <div className="card-body">
+                    <h5 className="card-title">{name}</h5>
+                    <p className="card-text">{description}</p>
 
                 </div>
-                <div class="card-footer">
+                <div className="card-footer">
                     <h6>Price: {price}</h6>
-                    <small class="text-muted"><button onClick={handleViewDetailsBtn} className="btn btn-dark">View Details</button></small>
+                    <small className="text-muted"><button onClick={handleViewDetailsBtn} className="btn btn-dark">View Details</button></small>
                 </div>
             </div>
         </div>
