@@ -13,8 +13,19 @@
 .text-logo:hover{
     color: rgb(49, 77, 128);
 }
-.nav-link,.logout-btn{
+.nav-link{
     color:rgba(245, 245, 245, 0.761);
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.logoutBtn{
+    background-color: #2D394B;
+    color:rgba(245, 245, 245, 0.761) ;
     text-decoration: none;
     margin-right: 10px;
     padding: 10px;
@@ -30,7 +41,7 @@
 
 }
 .user-name{
-    color:black;
+    color:skyblue;
     text-decoration: none;
     margin-right: 10px;
     padding: 10px;

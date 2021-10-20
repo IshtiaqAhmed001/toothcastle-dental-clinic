@@ -81,13 +81,22 @@ const Footer = () => {
                             <li> <NavLink className="footer-links" to="*">Friday : 5:00 PM - 11:00 PM</NavLink></li>
                             <li> <NavLink className="footer-links" to="*">Saturday : 4:00 PM - 11:00 PM</NavLink></li>
                         </ul>
-                        <div className="text-start ms-5 my-5">
-                            <NavLink style={linkStyle} to="/fb">{fbIcon}</NavLink>
-                            <NavLink style={linkStyle} to="/youtube">{youtubeIcon}</NavLink>
-                            <NavLink style={linkStyle} to="/twitter">{twitterIcon}</NavLink>
-                            <NavLink style={linkStyle} to="/linkedin">{linkedInIcon}</NavLink>
-                        </div>
+
                     </div>
+
+                </div>
+
+            </div>
+            <hr />
+            <div className="d-flex justify-content-between">
+                <div>
+                    <p className="ms-5 mt-2">© 2021 SkillReady Inc. All rights reserved.</p>
+                </div>
+                <div className="text-start me-5 ">
+                    <NavLink style={linkStyle} to="/fb">{fbIcon}</NavLink>
+                    <NavLink style={linkStyle} to="/youtube">{youtubeIcon}</NavLink>
+                    <NavLink style={linkStyle} to="/twitter">{twitterIcon}</NavLink>
+                    <NavLink style={linkStyle} to="/linkedin">{linkedInIcon}</NavLink>
                 </div>
 
             </div>

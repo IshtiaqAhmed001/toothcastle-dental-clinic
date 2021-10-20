@@ -21,7 +21,7 @@ const Service = ({ service }) => {
 
                 </div>
                 <div className="card-footer">
-                    <h6>Price: {price}</h6>
+
                     <small className="text-muted"><button onClick={handleViewDetailsBtn} className="btn btn-dark">View Details</button></small>
                 </div>
             </div>

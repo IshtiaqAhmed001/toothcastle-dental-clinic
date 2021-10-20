@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import useServices from '../../hooks/useServices';
+import './ServiceDetails.css';
 
 const ServiceDetails = () => {
     let { serviceNo } = useParams();
@@ -14,24 +16,25 @@ const ServiceDetails = () => {
 
     return (
         <div className="my-5">
-            <h1 className="my-5">THis is service no: {serviceNo}</h1>
+            <h1 className=" display-3 mt-5">Service Details</h1>
+            <hr className="w-50 mx-auto mb-5" />
 
             <div className="w-50 mx-auto">
                 {
-                    showDetails.map(singleDetail => <div class="card" style={{ width: "18rem" }}>
+                    showDetails.map(singleDetail => <div class="card mx-auto" style={{ width: "20rem" }}>
                         <img class="card-img-top" src={singleDetail.img} alt="Card image cap" />
                         <div class="card-body">
-                            <h5 class="card-title">{singleDetail.name}</h5>
+                            <h5 class="card-title ">{singleDetail.name}</h5>
                             <p class="card-text">{singleDetail.description}</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Price: {singleDetail.price}</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                            <li class="list-group-item fw-bold text-success">Price: {singleDetail.price}</li>
+
                         </ul>
                         <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <Link className="details-links" to="/*">Book Now</Link>
+                            <Link className="details-links" to="/home">Home</Link>
+
                         </div>
                     </div>
 
